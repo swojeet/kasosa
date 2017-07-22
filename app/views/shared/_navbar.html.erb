@@ -1,0 +1,33 @@
+<nav class="navbar navbar-toggleable-md sticky-top navbar-custom">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navarMenuItems" aria-controls="navarMenuItems" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <a class="navbar-brand" href="#">KaSoSa!</a>
+
+  <div class="collapse navbar-collapse" id="navarMenuItems">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+
+
+    </ul>
+
+    <% if admin_signed_in? %>
+      <%= link_to new_post_path, class: 'navbar_icons' do %>
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+      <% end %>
+
+      <%= link_to destroy_admin_session_path,method: :delete, class: 'navbar_icons' do %>
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
+  </div>
+</nav>

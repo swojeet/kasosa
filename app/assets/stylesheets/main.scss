@@ -4,7 +4,7 @@ body{
 }
 
 .navbar-nav {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
   font-weight: bolder;
   letter-spacing: 2px;
@@ -12,14 +12,26 @@ body{
   margin: 0 auto;
   > li {
     float: none;
-    margin: 0 100px;
+    margin: 0 70px;
     display: inline-block;
+  }
+
+  > li > a:hover{
+    background-color: rgba(30, 29, 29, 0.5);
   }
 }
 
 .no-padding{
   padding-left:0;
   padding-right:0;
+}
+
+.no-top-padding{
+  padding-top: 0 !important;
+}
+
+.no-bottom-padding{
+  padding-bottom: 0 !important;
 }
 
 .navbar-custom{

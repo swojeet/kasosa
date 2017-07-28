@@ -1,18 +1,39 @@
-<div class = "footer-container full-width">
-  <div class = "width-50 center-with-margin">
-    <div class="row">
-      <div class="col-xs-12 col-md-3  text-center padding-15">
-        <%= link_to 'Home', root_path %>
+<footer class = "footer navbar-fixed-bottom">
+  <div class = "footer-container full-width">
+    <div class = "width-50 center-with-margin">
+      <div class="row">
+        <div class="col-xs-12 col-md-3  text-center padding-15">
+          <%= link_to 'HOME', root_path %>
+        </div>
+        <div class="col-xs-12 col-md-3 text-center padding-15">
+          <%= link_to 'GALLERY',gallery_path%>
+        </div>
+        <div class="col-xs-12 col-md-3 text-center padding-15">
+          <%= link_to 'ABOUT',root_path%>
+        </div>
+        <div class="col-xs-12 col-md-3 text-center padding-15">
+          <%= link_to 'CONTACT', root_path %>
+        </div>
       </div>
-      <div class="col-xs-12 col-md-3 text-center padding-15">
-        <%= link_to 'Gallery',gallery_path%>
+
+      <div class = "row">
+        <div class = "col-xs-12 col-md-12 text-center">
+          <p>
+            &copy; KaSoSa. <%= DateTime.now.year %>.
+          </p>
+        </div>
       </div>
-      <div class="col-xs-12 col-md-3 text-center padding-15">
-        <%= link_to 'About',root_path%>
-      </div>
-      <div class="col-xs-12 col-md-3 text-center padding-15">
-        <%= link_to 'Contact', root_path %>
+
+      <div class = "row">
+        <div class = "col-xs-12 col-md-12 text-center">
+          <div class = "social-icon-container">
+
+              <%= link_to '<i class="fa fa-facebook-square" aria-hidden="true"></i>'.html_safe, 'https://www.facebook.com', target: '_blank', class: 'padding-5' %>
+              <%= link_to '<i class="fa fa-instagram" aria-hidden="true"></i>'.html_safe, 'https://www.instagram.com', target: '_blank', class: 'padding-5' %>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</footer>

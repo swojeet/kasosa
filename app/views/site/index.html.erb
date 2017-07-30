@@ -1,0 +1,41 @@
+<div class="brand_logo_container">
+  <span class="brand_logo"></span>
+</div>
+
+<div class="container-fluid no-padding">
+  <div class="row">
+     <div class="col-md-12">
+      <div class="brand_image_container">
+        <%= image_tag 'kasosa.png',alt: 'KaSoSa!', class: 'img-responsive', id: 'brand_image' %>
+      </div>
+     </div>
+  </div>
+</div>
+
+<div class="posts_container full-width" id="startchange">
+  <div class = "center-with-margin">
+    <% @posts.in_groups_of(2) do |post1, post2| %>
+      <% if post1 %>
+      <div class = "row greyish-bg full-width no-margin">
+          <div class = "col-xs-12 col-md-4 offset-md-1 padding-50 text-center">
+            <%= image_tag (post1.photo), class: 'posts_image' %>
+          </div>
+          <div class = "col-xs-12 col-md-5 padding-50">
+            <%= post1.caption %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class = "row full-width no-margin">
+        <% if post2 %>
+          <div class = "col-xs-12 col-md-5 offset-md-2 padding-50 text-center">
+            <%= post2.caption %>
+          </div>
+          <div class = "col-xs-12 col-md-4 padding-50 text-center">
+            <%= image_tag (post2.photo), class: 'posts_image' %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

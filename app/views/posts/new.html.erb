@@ -1,0 +1,16 @@
+<h2 class="text-center margin-20">New Post</h2>
+
+<%= simple_form_for @post, method: :create do |f| %>
+  <div class="form-container full-width">
+    <div class="row width-80 center-div">
+      <div class="col-xs-12 col-md-6">
+        <%= f.input :photo %>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <%= f.input :caption %>
+      </div>
+    </div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,12 @@
 {
   "name": "kasosa",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:swojeet/kasosa.git",
+  "author": "swojeet <swojeetkayastha@gmail.com>",
+  "license": "MIT"
 }

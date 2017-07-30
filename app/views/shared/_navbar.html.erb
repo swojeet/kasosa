@@ -1,0 +1,34 @@
+<nav class="navbar navbar-toggleable-md sticky-top navbar-custom no-top-padding no-bottom-padding">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navarMenuItems" aria-controls="navarMenuItems" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navarMenuItems">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'GALLERY',gallery_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'ABOUT',root_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT</a>
+      </li>
+
+
+    </ul>
+
+    <% if admin_signed_in? %>
+      <%= link_to new_post_path, class: 'navbar_icons' do %>
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+      <% end %>
+
+      <%= link_to destroy_admin_session_path,method: :delete, class: 'navbar_icons' do %>
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
+  </div>
+</nav>
